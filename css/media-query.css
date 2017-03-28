@@ -1,0 +1,798 @@
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+@media (max-width: 1199px) {
+    html {
+        font-size: 100%;
+    }
+    .subscribe-form {
+        width: 100%;
+    }
+    .btn-subscribe {
+        margin-top: 10px;
+    }
+    .picks h2,
+    .might-like h2 {
+        font-size: 20px;
+    }
+    .picks h2::before,
+    .might-like h2::before {
+        height: 30px;
+    }
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 95%;
+    }
+    /*footer*/
+    .md-100 {
+        width: 100%;
+    }
+    .subscribe h5 {
+        text-align: start;
+        padding-left: 0;
+    }
+    .page-links {
+        margin-bottom: 20px;
+    }
+    .custom-form-search {
+        width: 100% !important;
+        padding: 15px 45px 15px 15px;
+        height: 60px;
+        vertical-align: middle;
+        box-shadow: 0 1px 0 #e5e5e5;
+    }
+    .recent-blogs,
+    .opinion-columns {
+        padding-top: 3rem;
+        padding-bottom: 6rem;
+    }
+    .politics,
+    .sports,
+    .ciniema {
+        padding-bottom: 20px;
+    }
+    .news-head {
+        margin-bottom: 30px;
+    }
+    .picks h2 {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+    .might-like h2 {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .no-padding-md {
+        padding: 0;
+    }
+    .trending-news {
+        margin-bottom: 20px;
+    }
+    .latest-news,
+    .recommend-news {
+        padding-right: 0;
+    }
+    .news-caption {
+        padding: 0px 40px;
+    }
+    .md-tb {
+        display: table;
+        width: 50%;
+        padding: 0;
+        float: left;
+    }
+    .figure.mr-b-35 {
+        width: 100%;
+        padding-right: 15px;
+    }
+    .mansory-link {
+        display: table;
+        width: 50%;
+        float: left;
+        padding-right: 15px;
+    }
+    .mansory-mid {
+        display: table;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .img-fluid {
+        width: 100%;
+        height: auto;
+    }
+    .mansory-link.no-right-pd {
+        padding-right: 0;
+        padding-left: 15px;
+    }
+    .highlight-img {
+        margin-bottom: 30px;
+    }
+    .figure.mr-b-35.no-right-pd {
+        padding-right: 0;
+        padding-left: 15px;
+    }
+    .tab-on {
+        display: block;
+        position: absolute;
+        float: none;
+        top: 8px;
+        right: 15px;
+    }
+    header {
+        padding: 20px 0 15px 0;
+        position: relative;
+        /*margin-top: 40px;*/
+    }
+    .landing {
+        margin-bottom: 40px;
+    }
+    .close {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+    .form-collapse {
+        padding: 0;
+    }
+    .picks h2,
+    .might-like h2 {
+        font-size: 1.5625rem;
+    }
+    #navbarSupportedContent {
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+        background-color: #fff;
+        -moz-box-shadow: 0 10px 10px -10px #000000;
+        box-shadow: 0 10px 10px -10px #000000;
+    }
+    .trending-stories li {
+        padding: 20px 20px 15px;
+        width: 50%;
+        float: left;
+    }
+    .btn-colllapse {
+        display: block;
+    }
+    .trending-stories ul li:nth-child(even) {
+        padding-right: 0;
+    }
+    .trending-stories ul li:nth-child(odd) {
+        padding-left: 0;
+    }
+    .trending-stories .sep-rator a:after {
+        position: absolute;
+        content: "";
+        background-image: url("../images/separator.png");
+        width: 78px;
+        height: 1px;
+        left: 20px;
+        bottom: 0;
+    }
+    .trending-stories a {
+        letter-spacing: 0;
+        font-size: 14px;
+    }
+    #toggle {
+        display: block;
+    }
+    .search-collapse {
+        position: fixed;
+        z-index: 99;
+        top: 0;
+    }
+    .figure-caption.thumb {
+        line-height: 1.5;
+    }
+    .figure-caption {
+        line-height: 1.3;
+        margin-top: 12px;
+    }
+    .bg-caption-bold {
+        line-height: 1.2;
+    }
+    .video-caroul {
+        max-width: 100%;
+    }
+    .mrb-10-md {
+        margin-bottom: 10px;
+    }
+    .picks h2::before,
+    .might-like h2::before {
+        height: 35px;
+    }
+    .picks h2,
+    .might-like h2 {
+        padding: 11px 15px 5px 15px;
+    }
+    .recent-blogs h2::before,
+    .opinion-columns h2::before,
+    .latest-news h2::before {
+        height: 79px;
+    }
+    .social-nav {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 0 #e5e5e5, inset 0 1px 0 #e5e5e5;
+        background-color: white;
+        padding: 5px 0;
+    }
+    .google-ad-block {
+        display: none;
+    }
+    .social-link {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        z-index: 1;
+    }
+    .social-nav li a {
+        padding-bottom: 2px;
+    }
+    .news-wrapper > .figure figcaption,
+    .content-wrapper > .figure figcaption {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .might-like {
+        margin-bottom: 3rem;
+    }
+    .subscribe-form {
+        width: 300px;
+    }
+    .social-icons {
+        display: none;
+    }
+    .z-link {
+        right: 0;
+        top: 7px;
+    }
+    .search-tab {
+        position: absolute;
+        top: 0;
+        right: 1rem;
+    }
+    .navbar.custom-nav {
+        display: none;
+    }
+    .custom-navbar {
+        height: 0;
+        margin: 0!important;
+    }
+    .share h6 {
+        display: none;
+    }
+    .flex-column {
+        -webkit-flex-direction: row !important;
+        -ms-flex-direction: row !important;
+        flex-direction: row !important;
+        justify-content: center;
+    }
+    .share {
+        width: 100%;
+        bottom: 0;
+        /*top: 0;*/
+    }
+    .flex-column li a {
+        padding: .5em 1em;
+    }
+    .btn-subscribe {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    html {
+        font-size: 90%;
+    }
+    .news-caption {
+        width: 40%;
+        padding: 0;
+        padding-top: 0;
+        padding-left: 0;
+        float: right;
+    }
+    .news-caption h3 {
+        font-size: 16px;
+    }
+    .quote {
+        max-width: 100%;
+        float: none;
+    }
+    .news-content h2 {
+        font-size: 2rem;
+    }
+    .trending-stories li {
+        padding: 20px 0px 15px 0px;
+        width: 100%;
+        float: none;
+    }
+    .trending-stories .sep-rator a:after {
+        left: 0;
+    }
+    .head-caption h2 {
+        padding-right: 1.875rem;
+    }
+    .recent-blogs h2::before,
+    .opinion-columns h2::before,
+    .latest-news h2::before {
+        height: 75px;
+    }
+    .cap-left > br {
+        display: none;
+    }
+    .cap-left,
+    .cap-right {
+        float: none;
+    }
+    .clip::before {
+        bottom: 0;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
+    .clip-caption {
+        bottom: 15px;
+        left: 60px;
+    }
+    .list-left {
+        left: 17%;
+    }
+    .list-right {
+        right: 17%;
+    }
+    .z-link {
+        top: 5px;
+    }
+}
+
+@media (max-width: 580px) {
+    html {
+        font-size: 85%;
+    }
+    .sm-50 {
+        width: 50%;
+        float: left;
+    }
+    .sm-100 {
+        width: 100%;
+        float: none;
+    }
+    .no-padding-sm {
+        padding: 0;
+    }
+    .no-padding-top-sm {
+        padding-top: 0;
+    }
+    .no-padding-bottom-sm {
+        padding-bottom: 0;
+    }
+    .no-padding-left-sm {
+        padding-left: 0;
+    }
+    .no-padding-right-sm {
+        padding-right: 0;
+    }
+    .no-margin-sm {
+        margin: 0;
+    }
+    .no-margin-top-sm {
+        margin-top: 0;
+    }
+    .no-margin-bottom-sm {
+        margin-bottom: 0;
+    }
+    .no-margin-left-sm {
+        margin-left: 0;
+    }
+    .no-margin-right-sm {
+        margin-right: 0;
+    }
+    .video-carousel {
+        padding: 0;
+    }
+    .sm-tb {
+        display: table;
+        width: 100%;
+        padding: 0;
+        float: left;
+    }
+    .news-caption {
+        width: 100%;
+        padding-top: 20px;
+        padding-left: 0;
+        float: none;
+    }
+    .sm-right-padding-10 {
+        padding-right: 0px;
+    }
+    .sm-left-padding-10 {
+        padding-left: 0px;
+    }
+    .figure {
+        width: 100%;
+    }
+    .figure.mr-b-35 {
+        padding-right: 10px;
+    }
+    .figure.mr-b-35.no-right-pd {
+        padding-left: 10px;
+    }
+    .mansory-link {
+        padding-right: 10px;
+    }
+    .sm-padding-right-10 {
+        padding-right: 10px;
+    }
+    .sm-padding-left-10 {
+        padding-left: 10px;
+    }
+    .mansory-link.no-right-pd {
+        padding-left: 10px;
+    }
+    .fig-relative {
+        position: relative;
+        width: 100%;
+    }
+    .tab-on {
+        top: 5px;
+    }
+    .picks h2,
+    .might-like h2 {
+        padding: 13px 15px 5px 15px;
+    }
+    #toggle {
+        top: 7px;
+    }
+    .news-wrapper > .figure figcaption,
+    .content-wrapper > .figure figcaption {
+        text-align: left;
+        padding-bottom: .5rem;
+    }
+    .cap-left,
+    .cap-right {
+        float: none;
+    }
+    .quote {
+        text-align: center;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .quote::before,
+    .quote::after {
+        display: none;
+    }
+    .quote p {
+        padding-bottom: 10px!important;
+    }
+    .news-wrapper .clip {
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+    .news-content p {
+        padding-bottom: 25px;
+        font-size: 1.25rem;
+    }
+    .head-tag {
+        margin-bottom: 20px;
+    }
+    .head-title {
+        margin: 10px auto;
+    }
+    .video-head {
+        font-size: 20px;
+    }
+    .blockquote {
+        margin-bottom: 20px;
+        padding: 15px;
+        padding-left: 20px;
+    }
+    .news-wrapper h3,
+    .content-wrapper h3,
+    .news-wrapper h4 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .news-wrapper h6,
+    .news-wrapper h5 {
+        margin-bottom: 15px;
+    }
+    .video-title {
+        font-size: 10px;
+        margin-bottom: -2px;
+    }
+    .might-like {
+        padding-top: 5px;
+    }
+    .news-wrapper > .figure,
+    .content-wrapper > .figure {
+        box-shadow: 0 1px 0 #e5e5e5;
+    }
+    .social-nav {
+        justify-content: space-around;
+    }
+    .head-tag {
+        font-size: 11px;
+    }
+    .clip::before {
+        bottom: -10px;
+        background-size: 70%;
+        background-repeat: no-repeat;
+        left: 15px;
+    }
+    .clip-caption {
+        bottom: 10px;
+        left: 60px;
+    }
+    .news-nav li a {
+        min-width: auto;
+    }
+    .overlay ul li a {
+        font-size: 20px;
+    }
+    .list-right {
+        right: 10%;
+    }
+    .list-left {
+        left: 10%;
+    }
+    .overlay-icons {
+        right: 15px;
+    }
+    .subscribe-form {
+        width: 270px;
+    }
+}
+
+@media (max-width: 420px) {
+    html {
+        font-size: 80%;
+    }
+    /*footer*/
+    .xs-100 {
+        width: 100%!important;
+    }
+    .md-tb {
+        display: table;
+        width: 100%;
+        padding: 0;
+        float: left;
+    }
+    .xs-right-padding {
+        padding-right: 0;
+    }
+    .xs-left-padding {
+        padding-left: 0;
+    }
+    .figure.mr-b-35.no-right-pd {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .figure.mr-b-35 {
+        padding-right: 0;
+    }
+    .sm-left-padding-10 {
+        padding-left: 0;
+    }
+    .mansory-link.no-right-pd {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .mansory-link {
+        width: 100%;
+        padding-right: 0px;
+    }
+    .sm-50 {
+        width: 100%;
+        float: none;
+    }
+    .sm-padding-right-10,
+    .sm-right-padding-10,
+    {
+        padding-right: 0;
+    }
+    .figure-bg {
+        margin-bottom: 20px;
+    }
+    .no-padding-xs {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .news-nav li a {
+        font-size: 10px;
+        letter-spacing: 0.02rem;
+        padding-bottom: 4px;
+    }
+    #toggle {
+        top: 6px;
+    }
+    .head-caption {
+        position: static;
+    }
+    .head-caption h2 {
+        color: #222;
+        font-family: 'FarnhamDisplay-Medium';
+        font-size: 1.25rem;
+        line-height: 1.2;
+        letter-spacing: 0.02rem;
+        padding: 0;
+        margin-top: -10px;
+        margin-bottom: 20px;
+    }
+    .xs-pos {
+        display: block;
+    }
+    .xs-hide {
+        display: none;
+    }
+    .card-deck {
+        margin-bottom: 20px;
+    }
+    .trending-news a:hover .head-caption h2 {
+        color: #1955a5;
+    }
+    .view-link {
+        top: 25px;
+    }
+    .mr-b-35 {
+        margin-bottom: 20px;
+    }
+    .bg-caption-bold {
+        color: #222;
+        font-family: 'FarnhamDisplay-Bold';
+        font-size: 1.125rem;
+        letter-spacing: 0.03rem;
+    }
+    .custom-form-search {
+        height: 60px;
+    }
+    .recent-blogs h2::before,
+    .opinion-columns h2::before,
+    .latest-news h2::before {
+        height: 70px;
+    }
+    .recent-blogs,
+    .opinion-columns {
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+    }
+    .news-list a {
+        margin-bottom: 2.125rem;
+    }
+    .news-head {
+        margin-bottom: 30px;
+    }
+    .picks h2,
+    .might-like h2 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .video {
+        padding-bottom: 80px;
+    }
+    .recommend {
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+    .swiper-pagination-bullet {
+        width: 20px;
+    }
+    .subscribe h5 {
+        text-align: center;
+    }
+    .btn-subscribe {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .primary-footer {
+        padding: 2.75rem 0;
+    }
+    .figure-caption {
+        margin-top: 5px;
+    }
+    .news-caption {
+        padding-top: 10px;
+    }
+    .news-nav {
+        padding-bottom: 20px;
+    }
+    .footer-icons-list {
+        text-align: center;
+    }
+    .overlay ul {
+        padding-right: 3rem;
+    }
+    .overlay-icons ul {
+        padding-right: 0;
+    }
+    .subscribe-form {
+        width: 100%;
+    }
+    .btn-subscribe {
+        letter-spacing: 0.2rem;
+        margin-top: 10px;
+    }
+}
